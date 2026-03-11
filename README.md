@@ -12,7 +12,7 @@ The goal is to identify:
 
 By analyzing job postings and salary information, this project provides insights into the skills that drive demand and salary in the data analytics field.
 
-Project SQL folder : [Query 1 folder](/Query%201/)
+SQL queries used in this project: [Query 1 folder](/Query%201/)
 
 
 # Background
@@ -28,6 +28,18 @@ This project aims to answer three key questions:
  3- What do the highest-paying Data Analyst jobs look like?
 
 Understanding these trends can help aspiring data analysts focus on the most valuable technical skills in the market.
+
+# Dataset
+
+The dataset used in this project contains job postings for data-related roles, including job titles, salaries, companies, and required skills.
+
+The data is organized into several tables:
+
+- `job_postings_fact` – contains job postings information such as title, salary, and company
+- `skills_job_dim` – links job postings to required skills
+- `skills_dim` – contains the list of skills
+
+This relational structure allows the analysis of skill demand and salary trends across thousands of job postings.
 
 # Tools I used 
 
@@ -86,8 +98,8 @@ LIMIT 5
 | Tableau  | 46,554  |
 | Power BI | 39,468  |
 
+<img width="1652" height="992" alt="image" src="https://github.com/user-attachments/assets/4a205e2f-3916-4104-879f-4a2b5cb0f3f3" />
 
-![Most In-Demand skills](Images\Most_in_demand_skills.jpg)
 
 ### **Insight:**
 
@@ -113,7 +125,8 @@ GROUP BY skills
 HAVING COUNT(*) > 10
 ORDER BY avg_salary DESC
 ```
-![Highest_paying_skills](Images\Highest_paying_skills.jpg)
+<img width="1659" height="977" alt="image" src="https://github.com/user-attachments/assets/2152bd64-3f43-472d-a93e-1341ff68ea00" />
+
 ### **Key insight :**
 
 Skills related to big data, cloud computing, and data engineering are associated with the highest salaries.
@@ -135,8 +148,23 @@ These skills often push salaries into the $110k–$130k range.
 However, traditional analytics tools like SQL, Python, Excel, Tableau, and Power BI still dominate job demand, even if their average salary is slightly lower.
 
 This suggests that the most valuable analysts are those who combine core analytics skills with data engineering or cloud technologies.
+## 3. Demand vs Salary Relationship
 
-## **3. Highest Paying Data Analyst Jobs :**
+To better understand the relationship between skill demand and salary, I created a scatter plot comparing the number of job postings for each skill with the average salary associated with that skill.
+
+<img src="your_scatter_plot_image.png" width="700">
+
+### Insight
+
+The visualization highlights an important pattern in the Data Analyst job market.
+
+Core analytical skills such as **SQL, Python, Excel, and Tableau** appear in the highest number of job postings, confirming that they form the foundation of most data analyst roles.
+
+In contrast, technologies related to **big data and data infrastructure** such as **Spark, Kafka, Snowflake, and Databricks** appear in fewer job postings but are associated with higher salaries.
+
+This suggests that while strong analytical fundamentals are essential, analysts who combine these skills with modern data infrastructure technologies may benefit from higher earning potential.
+
+## **4. Highest Paying Data Analyst Jobs :**
 
 Finally, I analyzed the top 10 highest-paying Data Analyst roles.
 
@@ -227,7 +255,7 @@ Beyond technical SQL skills, this project helped me practice exploratory data an
 
 Finally, this project reinforced the importance of connecting technical analysis to business insights, translating query results into conclusions that can guide career decisions and skill development strategies in the data analytics field.
 
-# Conclusion !
+# Conclusion 
 
 This analysis highlights two important trends in the Data Analyst job market.
 
