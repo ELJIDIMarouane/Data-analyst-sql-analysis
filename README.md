@@ -152,7 +152,8 @@ This suggests that the most valuable analysts are those who combine core analyti
 
 To better understand the relationship between skill demand and salary, I created a scatter plot comparing the number of job postings for each skill with the average salary associated with that skill.
 
-<img src="your_scatter_plot_image.png" width="700">
+<img width="2473" height="1453" alt="image" src="https://github.com/user-attachments/assets/8841a97b-976f-4512-896c-5f1e5a20d407" />
+
 
 ### Insight
 
